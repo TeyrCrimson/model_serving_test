@@ -1,8 +1,18 @@
 # model_serving_test
 Model server:
-```python yay.py```
+```python test_v2.py```
 To test:
-```python test_ping.py```
+```
+from request_module import Serving_clf
+requestor = Serving_clf(url=__INSERT URL HERE__)
+prediction = requestor.predict([frame])
+```
+where frame is an RGB image array.
 
-The server returns the number of frames of the video file specified by the filename posted in the script. 
-You should get 71.
+prediction should return a json in the form of:
+{
+  'predictions': {
+    'points': ([l,t,r,b]),
+    'attributes-value': (text)
+  }
+}
