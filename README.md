@@ -10,9 +10,11 @@ prediction = requestor.predict([frame])
 where frame is an RGB image array.
 
 prediction should return a json in the form of:
+```json
 {
   'predictions': {
     'points': ([l,t,r,b]),
     'attributes-value': (text)
   }
 }
+```
