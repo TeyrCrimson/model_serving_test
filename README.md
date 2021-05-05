@@ -1,6 +1,8 @@
 # model_serving_test
-## Model server:
+## Model server (Flask):
 ```python test_v2.py```
+## Model server (FastAPI):
+```python test_v3.py```
 ## To test:
 ```
 from request_module import Serving_clf
